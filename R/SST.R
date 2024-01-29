@@ -32,30 +32,34 @@ SST_standalone <- function(item_bank = paste0("custom-assets/stimuli/berkowitz_m
 
     psychTestR::join(
 
-      musicassessr::present_stimuli(stimuli_type = "musicxml_file",
-                                    stimuli = item,
-                                    page_label = stringr::str_remove_all(name, " "),
-                                    page_title = name,
-                                    answer_meta_data = tibble::tibble(
-                                      item = basename(item),
-                                      meta = name
-                                    ),
-                                    display_modality = "visual",
-                                    page_type = "record_audio_page",
-                                    get_answer = musicassessr::get_answer_pyin,
-                                    show_record_button = TRUE,
-                                    sheet_music_start_hidden = FALSE,
-                                    sound_only_first_melody_note = TRUE,
-                                    show_sheet_music = TRUE),
+      psychTestR::module(label = stringr::str_remove_all(name, " "),
 
-      psychTestR::elt_save_results_to_disk(complete = FALSE),
+        musicassessr::present_stimuli(stimuli_type = "musicxml_file",
+                                      stimuli = item,
+                                      page_label = "record_auduio",
+                                      page_title = name,
+                                      answer_meta_data = tibble::tibble(
+                                        item = basename(item),
+                                        meta = name
+                                      ),
+                                      display_modality = "visual",
+                                      page_type = "record_audio_page",
+                                      get_answer = musicassessr::get_answer_pyin,
+                                      show_record_button = TRUE,
+                                      sheet_music_start_hidden = FALSE,
+                                      sound_only_first_melody_note = TRUE,
+                                      show_sheet_music = TRUE),
 
-      psychTestR::NAFC_page(label = paste0("happy_", name),
-                            prompt = "Were you happy with that take?",
-                            choices = c("Yes", "No", "Skip")
-                            ),
+        psychTestR::elt_save_results_to_disk(complete = FALSE),
 
-      psychTestR::elt_save_results_to_disk(complete = FALSE)
+        psychTestR::NAFC_page(label = paste0("happy_", name),
+                              prompt = "Were you happy with that take?",
+                              choices = c("Yes", "No", "Skip")
+                              ),
+
+        psychTestR::elt_save_results_to_disk(complete = FALSE)
+
+      )
 
     )
   })
