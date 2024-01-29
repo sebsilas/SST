@@ -26,3 +26,5 @@ Depends:
 Remotes: 
     syntheso/musicassessr,
     pmcharrison/psychTestR
+URL: https://github.com/sebsilas/SST
+BugReports: https://github.com/sebsilas/SST/issues
