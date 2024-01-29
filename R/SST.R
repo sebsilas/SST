@@ -1,6 +1,6 @@
 
 
-#' Launch the SST test as a standalone
+#' Launch the SST test standalone
 #'
 #' @param item_bank
 #' @param app_name
