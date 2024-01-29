@@ -1,5 +1,20 @@
 
 
+#' Launch the SST test as a standalone
+#'
+#' @param item_bank
+#' @param app_name
+#' @param musicassessr_aws
+#' @param get_p_id
+#' @param data_collection_method
+#' @param no_repetitions
+#' @param max_goes_forced
+#' @param no_items
+#'
+#' @return
+#' @export
+#'
+#' @examples
 SST_standalone <- function(item_bank = paste0("custom-assets/stimuli/berkowitz_musicxml/", list.files(system.file('www/stimuli/berkowitz_musicxml', package = 'SST'), pattern = "\\.musicxml$")),
                            app_name,
                            musicassessr_aws = FALSE,
