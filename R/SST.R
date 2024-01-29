@@ -36,7 +36,7 @@ SST_standalone <- function(item_bank = paste0("custom-assets/stimuli/berkowitz_m
 
         musicassessr::present_stimuli(stimuli_type = "musicxml_file",
                                       stimuli = item,
-                                      page_label = "record_auduio",
+                                      page_label = "record_audio",
                                       page_title = name,
                                       answer_meta_data = tibble::tibble(
                                         item = basename(item),
@@ -68,7 +68,7 @@ SST_standalone <- function(item_bank = paste0("custom-assets/stimuli/berkowitz_m
 
         psychTestR::join(
           items,
-          psychTestR::elt_save_results_to_disk(complete = FALSE)
+          psychTestR::elt_save_results_to_disk(complete = TRUE)
         )
   }
 
