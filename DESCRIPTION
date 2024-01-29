@@ -1,0 +1,28 @@
+Package: SST
+Title: Sight Singing Test
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Sebastian",
+           family = "Silas",
+           role = c("aut", "cre"),
+           email = "sebsilas@gmail.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Collect and analyse sight-singing data through an empirically validated test.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Imports: 
+    itembankr (>= 0.1.0),
+    magrittr,
+    musicassessr (>= 0.0.0.9000),
+    psychTestR (>= 2.23.0),
+    readxl
+Depends: 
+    R (>= 2.10),
+    musicassessr (>= 0.0.0.9000)
+Remotes: 
+    syntheso/musicassessr,
+    pmcharrison/psychTestR
